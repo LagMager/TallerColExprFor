@@ -266,9 +266,9 @@ val e6_6 = List()
 val r6_6 = anagramasDeFrase(f6_6)
 assert(r6_6.toSet == e6_6.toSet)
 
-// Caso 6.7: Otra frase sin solucion
-val f6_7 = List("Cosas", "y") // IOcF = [('a',1),('c',1),('o',1),('s',2),('y',1)]
-val e6_7 = List()
+// Caso 6.7: Frase con solucion
+val f6_7 = List("Cosas", "y")
+val e6_7 = List(List("cosas", "y"), List("y", "cosas"))
 val r6_7 = anagramasDeFrase(f6_7)
 assert(r6_7.toSet == e6_7.toSet)
 

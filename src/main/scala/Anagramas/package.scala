@@ -171,11 +171,15 @@ package object Anagramas {
 
                 // d. Recursivamente, encontrar todas las frases que se pueden formar
                 //    con las ocurrencias restantes ('ocSiguientes').
+                if ocSiguientes.size < ocurrenciasRestantes.size // Ensure progress is made
                 fraseCola <- buscarAnagramasRecursivo(ocSiguientes)
 
                 // e. Si la recursión encontró soluciones (fraseCola), construir la frase completa
                 //    añadiendo la 'palabra' actual al inicio de cada 'fraseCola'.
-            } yield palabra :: fraseCola
+            } yield{
+              palabra :: fraseCola
+            } 
+
 
             // Devolver la lista acumulada de todas las frases completas encontradas.
             solucionesParciales
